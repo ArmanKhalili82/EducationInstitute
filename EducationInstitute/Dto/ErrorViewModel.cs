@@ -1,4 +1,4 @@
-namespace EducationInstitute.Models
+namespace EducationInstitute.DTO
 {
     public class ErrorViewModel
     {
