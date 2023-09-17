@@ -5,10 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EducationInstitute.Controllers
 {
-    public class AuthenticationController : Controller
+    [Route("[controller]")]
+    public class AuthenticationController : ControllerBase
     {
         [HttpPost("Login")]
-        public async Task<ActionResult> Login(LoginDto login)
+        public async Task<ActionResult> Login([FromBody] LoginDto login)
         {
             var db = new ApplicationDbContext();
 
